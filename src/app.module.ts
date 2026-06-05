@@ -28,6 +28,7 @@ import { UsersModule } from './modules/users/users.module';
         database: configService.get<string>('DATABASE_NAME'),
         autoLoadEntities: true,
         synchronize: false,
+        ssl: { rejectUnauthorized: false },
       }),
     }),
     UsersModule,

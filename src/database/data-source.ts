@@ -13,5 +13,5 @@ export default new DataSource({
   database: process.env.DATABASE_NAME ?? 'trackflow',
   entities: ['src/**/*.entity{.ts,.js}'],
   migrations: ['src/database/migrations/*{.ts,.js}'],
-  ssl: { rejectUnauthorized: false }, // required for Neon
+  ssl: { rejectUnauthorized: false },
 });
