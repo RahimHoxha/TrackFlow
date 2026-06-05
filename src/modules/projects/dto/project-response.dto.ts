@@ -1,0 +1,21 @@
+import { ApiProperty, ApiPropertyOptional } from '@nestjs/swagger';
+
+export class ProjectResponseDto {
+  @ApiProperty()
+  id: string;
+
+  @ApiProperty()
+  name: string;
+
+  @ApiPropertyOptional()
+  description: string | null;
+
+  @ApiProperty()
+  ownerId: string;
+
+  @ApiProperty()
+  createdAt: Date;
+
+  @ApiProperty()
+  updatedAt: Date;
+}
