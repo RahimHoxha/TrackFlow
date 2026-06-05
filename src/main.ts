@@ -10,7 +10,7 @@ async function bootstrap() {
 
   const configService = app.get(ConfigService);
   const corsOrigins = configService
-    .get<string>('CORS_ORIGINS', 'http://localhost:5173,http://127.0.0.1:5173')
+    .get<string>('FRONTEND_URL', 'http://localhost:5173,http://127.0.0.1:5173')
     .split(',')
     .map((o) => o.trim())
     .filter(Boolean);
@@ -20,6 +20,7 @@ async function bootstrap() {
     credentials: true,
     methods: ['GET', 'HEAD', 'PUT', 'PATCH', 'POST', 'DELETE', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization', 'Accept'],
+    
   });
 
   app.useGlobalPipes(
