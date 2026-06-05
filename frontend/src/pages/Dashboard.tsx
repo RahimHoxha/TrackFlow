@@ -348,7 +348,7 @@ export default function Dashboard() {
             </div>
             <div className="sidebar-projects-scroll">
               {projects.length === 0 ? (
-                <Text type="secondary" style={{ fontSize: 12, padding: '0 8px' }}>
+                <Text type="secondary" style={{ fontSize: 12, padding: '0 8px', color: "#fff" }}>
                   No projects yet.
                 </Text>
               ) : (
